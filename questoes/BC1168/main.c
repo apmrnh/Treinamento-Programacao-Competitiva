@@ -1,0 +1,28 @@
+#include <stdio.h>
+ 
+int main() {
+ 
+    char num[105];
+    int led,testes;
+    scanf("%d", &testes);
+    for (int j = 0; j < testes; j++) {
+        led = 0;
+        scanf("%s", num);
+        for (int i = 0; num[i] != '\0'; i++) {
+            switch (num[i]) {
+                case '0': led += 6; break;
+                case '1': led += 2; break;
+                case '2': led += 5; break;
+                case '3': led += 5; break;
+                case '4': led += 4; break;
+                case '5': led += 5; break;
+                case '6': led += 6; break;
+                case '7': led += 3; break;
+                case '8': led += 7; break;
+                case '9': led += 6; break;
+            }
+        }
+        printf("%d leds\n", led);
+    }
+    return 0;
+}
